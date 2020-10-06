@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { useSortBy, useTable } from "react-table";
 import Table from "./Table";
 
@@ -27,6 +28,17 @@ export function useDataContext() {
   }
   return context;
 }
+
+Data.propTypes = {
+  columns: PropTypes.arrayOf(
+    PropTypes.shape({
+      Header: PropTypes.elementType,
+      accessor: PropTypes.string,
+    })
+  ).isRequired,
+  data: PropTypes.array,
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+};
 
 Data.Table = Table;
 

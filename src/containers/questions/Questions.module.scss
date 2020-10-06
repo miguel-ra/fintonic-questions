@@ -6,3 +6,9 @@
   margin: 0 auto;
   padding: 3.2rem;
 }
+
+@media screen and (max-width: $breakpoint-medium) {
+  .section {
+    padding: 1.7rem 3.2rem;
+  }
+}

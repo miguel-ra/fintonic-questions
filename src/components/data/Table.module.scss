@@ -1,0 +1,90 @@
+@import "../../styles/colors.scss";
+@import "../../styles/breakpoints.scss";
+
+.wrapper {
+  overflow-y: scroll;
+  box-sizing: content-box;
+  margin-bottom: 3.2rem;
+}
+
+.table {
+  min-width: $breakpoint-medium;
+  width: 100%;
+  border-collapse: collapse;
+
+  thead {
+    background: $color-primary-dark;
+  }
+
+  th {
+    text-align: left;
+    min-width: 12rem;
+    font-size: 1.4rem;
+    padding: 0.7rem 1.4rem;
+    transition: color 0.25s ease-in-out, background 0.25s ease-in-out;
+    .icon {
+      float: right;
+      transform: translateY(2px);
+    }
+    &.active {
+      color: $color-secondary;
+    }
+    &.isSorteable {
+      user-select: none;
+      &:hover {
+        background: $color-primary-light;
+      }
+    }
+  }
+
+  tr {
+    border-bottom: 2px solid $color-primary-light;
+
+    td {
+      padding: 0.7rem 1.4rem;
+      &:last-child {
+        width: 100%;
+      }
+    }
+    &:first-child {
+      td {
+        padding-top: 1.4rem;
+      }
+    }
+    &:last-child {
+      border: none;
+      td {
+        padding-bottom: 1.4rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-medium) {
+  .wrapper {
+    overflow-y: scroll;
+    max-width: calc(100vw - 6.4rem);
+    transform: translateX(3.2rem);
+    margin: 0 -3.2rem;
+    box-sizing: content-box;
+    margin-bottom: 3.2rem;
+  }
+
+  .table {
+    tr {
+      td {
+        padding: 0.3rem 0.7rem;
+      }
+      &:first-child {
+        td {
+          padding-top: 0.7rem;
+        }
+      }
+      &:last-child {
+        td {
+          padding-bottom: 0.7rem;
+        }
+      }
+    }
+  }
+}

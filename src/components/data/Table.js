@@ -1,5 +1,11 @@
 import React from "react";
+import cx from "classnames";
 import { useDataContext } from "./Data";
+import classes from "./Table.module.scss";
+
+import { ReactComponent as IconSort } from "../../assets/icons/sort.svg";
+import { ReactComponent as IconSortDown } from "../../assets/icons/sort-down.svg";
+import { ReactComponent as IconSortUp } from "../../assets/icons/sort-up.svg";
 
 function Table() {
   const {
@@ -12,20 +18,30 @@ function Table() {
   } = useDataContext();
 
   return (
-    <>
-      <table {...getTableProps()}>
+    <div className={classes.wrapper}>
+      <table className={classes.table} {...getTableProps()}>
         <thead>
           <tr>
             {headers.map((column) => (
-              <th {...column.getHeaderProps(column.getSortByToggleProps())}>
+              <th
+                {...column.getHeaderProps(column.getSortByToggleProps())}
+                className={cx({
+                  [classes.active]: column.isSorted,
+                  [classes.isSorteable]: !column.disableSortBy,
+                })}
+              >
                 {column.render("Header")}
                 {!column.disableSortBy ? (
-                  <span>
-                    {column.isSorted
-                      ? column.isSortedDesc
-                        ? " 🔽"
-                        : " 🔼"
-                      : "🔽🔼"}
+                  <span className={classes.icon}>
+                    {column.isSorted ? (
+                      column.isSortedDesc ? (
+                        <IconSortDown />
+                      ) : (
+                        <IconSortUp />
+                      )
+                    ) : (
+                      <IconSort />
+                    )}
                   </span>
                 ) : null}
               </th>
@@ -47,7 +63,7 @@ function Table() {
           })}
         </tbody>
       </table>
-    </>
+    </div>
   );
 }
 
