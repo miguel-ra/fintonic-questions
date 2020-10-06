@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { generatePages } from "./helpers/pagination";
+import generatePages from "./helpers/generatePages";
 import { useDataContext } from "./Data";
 import classes from "./Pagination.module.scss";
 

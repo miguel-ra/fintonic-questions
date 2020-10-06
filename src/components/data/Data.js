@@ -1,12 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { useSortBy, useTable, usePagination } from "react-table";
+import { useSortBy, useTable, usePagination, useFilters } from "react-table";
+import Filter from "./Filter";
 import Table from "./Table";
 import Pagination from "./Pagination";
 
 const DataContext = React.createContext();
 
 const COMPONENT_PLUGINS = new Map([
+  [Filter, useFilters],
   [Table, useSortBy],
   [Pagination, usePagination],
 ]);
@@ -50,6 +52,7 @@ Data.propTypes = {
   children: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
 };
 
+Data.Filter = Filter;
 Data.Table = Table;
 Data.Pagination = Pagination;
 

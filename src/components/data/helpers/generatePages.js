@@ -1,4 +1,4 @@
-export function generatePages(pageIndex, showPages, numberOfPages) {
+export default function generatePages(pageIndex, showPages, numberOfPages) {
   let pages = [pageIndex];
   let index = 0;
   let buttonInserted = true;

@@ -27,6 +27,7 @@ function Questions() {
         <pre>{error?.message || `Error fetching data from ${OPENDB_URL}`}</pre>
       ) : (
         <Data columns={columns} data={response.results}>
+          <Data.Filter />
           <Data.Table />
           <Data.Pagination />
         </Data>
