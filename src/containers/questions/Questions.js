@@ -1,0 +1,35 @@
+import React from "react";
+import { useQuery } from "react-query";
+import Spinner from "../../components/spinner/Spinner";
+import classes from "./Questions.module.scss";
+
+const OPENDB_URL = "https://opentdb.com/api.php?amount=50";
+
+const fetchQuestions = async () => {
+  const response = await fetch(OPENDB_URL);
+  return response.json();
+};
+
+function Questions() {
+  const { data: response, isLoading, isError, isSuccess, error } = useQuery(
+    "questions",
+    fetchQuestions
+  );
+
+  return (
+    <section className={classes.section}>
+      <h1>Browse Questions</h1>
+      {isLoading ? (
+        <Spinner />
+      ) : isError || (isSuccess && response?.response_code !== 0) ? (
+        <pre>{error?.message || `Error fetching data from ${OPENDB_URL}`}</pre>
+      ) : (
+        response.results.map((row) => (
+          <div key={row.question}>{row.category}</div>
+        ))
+      )}
+    </section>
+  );
+}
+
+export default Questions;

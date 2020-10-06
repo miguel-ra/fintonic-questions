@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./components/header/Header";
+import Questions from "./containers/questions/Questions";
 
 import { ReactComponent as IconBars } from "./assets/icons/bars.svg";
 import { ReactComponent as IconPlus } from "./assets/icons/plus.svg";
@@ -20,27 +21,7 @@ function App() {
     <>
       <Header items={menuItems} />
       <main>
-        <section>
-          <h1>Browse Questions</h1>
-          <table>
-            <thead>
-              <tr>
-                <th>Category</th>
-                <th>Type</th>
-                <th>Difficulty</th>
-                <th>Question</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Category</td>
-                <td>Type</td>
-                <td>Difficulty</td>
-                <td>Question</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
+        <Questions />
       </main>
     </>
   );
