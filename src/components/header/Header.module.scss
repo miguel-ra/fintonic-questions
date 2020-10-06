@@ -1,0 +1,70 @@
+@import "../../styles/colors.scss";
+@import "../../styles/breakpoints";
+
+.header {
+  background-color: $color-primary;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.4rem;
+}
+
+.nav {
+  margin: 0 -0.7rem;
+}
+
+.list {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1.4rem 0;
+}
+
+.item {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  background-color: $color-primary-dark;
+  padding: 0.7rem 1.4rem;
+  margin: 1.4rem 0.7rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease-in-out, transform 0.25s ease-in-out;
+  &:hover {
+    background-color: $color-primary-light;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.icon {
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-right: 0.7rem;
+}
+
+@media screen and (max-width: $breakpoint-medium) {
+  .icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $breakpoint-small) {
+  .icon {
+    display: block;
+  }
+
+  .nav {
+    width: 100%;
+    margin: 1.4rem 0;
+  }
+
+  .item {
+    width: 100%;
+    margin: 0.7rem;
+  }
+}
