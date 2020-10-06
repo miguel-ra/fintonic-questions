@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/header/Header";
 import Questions from "./containers/questions/Questions";
+import classes from "./App.module.scss";
 
 import { ReactComponent as IconBars } from "./assets/icons/bars.svg";
 import { ReactComponent as IconPlus } from "./assets/icons/plus.svg";
@@ -20,7 +21,7 @@ function App() {
   return (
     <>
       <Header items={menuItems} />
-      <main>
+      <main className={classes.main}>
         <Questions />
       </main>
     </>

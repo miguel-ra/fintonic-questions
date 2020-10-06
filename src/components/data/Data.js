@@ -1,17 +1,27 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { useSortBy, useTable } from "react-table";
+import { useSortBy, useTable, usePagination } from "react-table";
 import Table from "./Table";
+import Pagination from "./Pagination";
 
 const DataContext = React.createContext();
 
+const COMPONENT_PLUGINS = new Map([
+  [Table, useSortBy],
+  [Pagination, usePagination],
+]);
+
 function Data({ columns, data, children }) {
+  const plugins = React.Children.map(children, (child) =>
+    COMPONENT_PLUGINS.get(child.type)
+  );
+
   const methods = useTable(
     {
       columns,
       data,
     },
-    useSortBy
+    ...plugins
   );
 
   return (
@@ -41,5 +51,6 @@ Data.propTypes = {
 };
 
 Data.Table = Table;
+Data.Pagination = Pagination;
 
 export default Data;

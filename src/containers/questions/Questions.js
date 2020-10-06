@@ -28,6 +28,7 @@ function Questions() {
       ) : (
         <Data columns={columns} data={response.results}>
           <Data.Table />
+          <Data.Pagination />
         </Data>
       )}
     </section>
