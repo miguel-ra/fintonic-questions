@@ -1,7 +1,9 @@
 import React from "react";
 import { useQuery } from "react-query";
+import Data from "../../components/data/Data";
 import Spinner from "../../components/spinner/Spinner";
 import classes from "./Questions.module.scss";
+import { columns } from "./data-config";
 
 const OPENDB_URL = "https://opentdb.com/api.php?amount=50";
 
@@ -24,9 +26,9 @@ function Questions() {
       ) : isError || (isSuccess && response?.response_code !== 0) ? (
         <pre>{error?.message || `Error fetching data from ${OPENDB_URL}`}</pre>
       ) : (
-        response.results.map((row) => (
-          <div key={row.question}>{row.category}</div>
-        ))
+        <Data columns={columns} data={response.results}>
+          <Data.Table />
+        </Data>
       )}
     </section>
   );
