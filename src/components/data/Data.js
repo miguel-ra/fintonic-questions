@@ -1,22 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { useSortBy, useTable, usePagination, useFilters } from "react-table";
+import { useTable } from "react-table";
 import Filter from "./Filter";
 import Table from "./Table";
 import Pagination from "./Pagination";
+import getPluginsToLoad from "./helpers/getPluginsToLoad";
 
 const DataContext = React.createContext();
 
-const COMPONENT_PLUGINS = new Map([
-  [Filter, useFilters],
-  [Table, useSortBy],
-  [Pagination, usePagination],
-]);
-
 function Data({ columns, data, children }) {
-  const plugins = React.Children.map(children, (child) =>
-    COMPONENT_PLUGINS.get(child.type)
-  );
+  const plugins = getPluginsToLoad(children);
 
   const methods = useTable(
     {
