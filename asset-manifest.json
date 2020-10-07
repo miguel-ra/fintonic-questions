@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/fintonic-questions/static/css/main.d873f3a0.chunk.css",
+    "main.js": "/fintonic-questions/static/js/main.99304974.chunk.js",
+    "main.js.map": "/fintonic-questions/static/js/main.99304974.chunk.js.map",
+    "runtime-main.js": "/fintonic-questions/static/js/runtime-main.f8bb8be0.js",
+    "runtime-main.js.map": "/fintonic-questions/static/js/runtime-main.f8bb8be0.js.map",
+    "static/js/2.d8a69fed.chunk.js": "/fintonic-questions/static/js/2.d8a69fed.chunk.js",
+    "static/js/2.d8a69fed.chunk.js.map": "/fintonic-questions/static/js/2.d8a69fed.chunk.js.map",
+    "index.html": "/fintonic-questions/index.html",
+    "precache-manifest.bcb27fdeb8a9246dd78c7c059376c048.js": "/fintonic-questions/precache-manifest.bcb27fdeb8a9246dd78c7c059376c048.js",
+    "service-worker.js": "/fintonic-questions/service-worker.js",
+    "static/css/main.d873f3a0.chunk.css.map": "/fintonic-questions/static/css/main.d873f3a0.chunk.css.map",
+    "static/js/2.d8a69fed.chunk.js.LICENSE.txt": "/fintonic-questions/static/js/2.d8a69fed.chunk.js.LICENSE.txt",
+    "static/media/bars.33020ee9.svg": "/fintonic-questions/static/media/bars.33020ee9.svg",
+    "static/media/comments.1a5340d7.svg": "/fintonic-questions/static/media/comments.1a5340d7.svg",
+    "static/media/gears.08da7896.svg": "/fintonic-questions/static/media/gears.08da7896.svg",
+    "static/media/plus.4962bf0d.svg": "/fintonic-questions/static/media/plus.4962bf0d.svg",
+    "static/media/sign-in.169cd592.svg": "/fintonic-questions/static/media/sign-in.169cd592.svg",
+    "static/media/sort-down.4ff747c8.svg": "/fintonic-questions/static/media/sort-down.4ff747c8.svg",
+    "static/media/sort-up.0b0c31f3.svg": "/fintonic-questions/static/media/sort-up.0b0c31f3.svg",
+    "static/media/sort.7c6ccf14.svg": "/fintonic-questions/static/media/sort.7c6ccf14.svg",
+    "static/media/spinner.4dd74b07.svg": "/fintonic-questions/static/media/spinner.4dd74b07.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f8bb8be0.js",
+    "static/js/2.d8a69fed.chunk.js",
+    "static/css/main.d873f3a0.chunk.css",
+    "static/js/main.99304974.chunk.js"
+  ]
+}
