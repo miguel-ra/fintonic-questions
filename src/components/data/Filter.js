@@ -7,7 +7,7 @@ function Filter() {
   const { headers } = useDataContext();
 
   return (
-    <div className={classes.container}>
+    <form className={classes.container}>
       {headers.map((column) =>
         column.canFilter ? (
           <React.Fragment key={column.id}>
@@ -15,7 +15,7 @@ function Filter() {
           </React.Fragment>
         ) : null
       )}
-    </div>
+    </form>
   );
 }
 

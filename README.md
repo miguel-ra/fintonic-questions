@@ -1,68 +1,50 @@
+# Fintonic questions - code challenge
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+#### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### `npm test`
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+#### `npm build`
 
-### `yarn test`
+## Demo
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You can try it [here](https://miguel-ra.github.io/fintonic-questions/).
 
-### `yarn build`
+## Requirements
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Use React
+- Replicate [https://opentdb.com/browse.php](https://opentdb.com/browse.php), using this API [https://opentdb.com/api_config.php](https://opentdb.com/api_config.php)
+- The menu should not have any logic, just be layout.
+- **Extra**: Create question filtering
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## TODOs
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Because the purpose of this challenge was to make it simple and without spending much time, I would like to comment on some interesting improvements.
 
-### `yarn eject`
+### Create api client:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Only one endpoint it's being used, so I decided to call it from where it was required.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I would define a network layer, where all the endpoints are defined.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Check all re-renders and see if it can be optimized
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Now I'm only using useMemo in one place (where the options for the filter are generated), I would like to check in details if another optimitation can be done. But in the end when there is a render it is because the information has changed and the ui needs to be updated.
 
-## Learn More
+### Improve responsive design
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+One option would be to use a grid and reposition items based on screen size.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Add text filter
 
-### Code Splitting
+Create a new filter using a text input.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### Add keyboard events to table headers
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+What I would do is add the role, tabindex and control the necessary events.

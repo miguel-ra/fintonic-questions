@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useMemo } from "react";
 import cx from "classnames";
 import classes from "./Select.module.scss";
 
 function Select({
   column: { filterValue, setFilter, preFilteredRows, id, Header },
 }) {
-  const options = React.useMemo(() => {
+  const options = useMemo(() => {
     const options = new Set();
     preFilteredRows.forEach((row) => {
       options.add(row.values[id]);
