@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/fintonic-questions/precache-manifest.bcb27fdeb8a9246dd78c7c059376c048.js"
+  "/fintonic-questions/precache-manifest.f919a602c45ab9390e27db89f9a34cd8.js"
 );
 
 self.addEventListener('message', (event) => {

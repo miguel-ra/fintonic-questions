@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/fintonic-questions/static/css/main.d873f3a0.chunk.css",
-    "main.js": "/fintonic-questions/static/js/main.99304974.chunk.js",
-    "main.js.map": "/fintonic-questions/static/js/main.99304974.chunk.js.map",
+    "main.js": "/fintonic-questions/static/js/main.4f0013cd.chunk.js",
+    "main.js.map": "/fintonic-questions/static/js/main.4f0013cd.chunk.js.map",
     "runtime-main.js": "/fintonic-questions/static/js/runtime-main.f8bb8be0.js",
     "runtime-main.js.map": "/fintonic-questions/static/js/runtime-main.f8bb8be0.js.map",
     "static/js/2.d8a69fed.chunk.js": "/fintonic-questions/static/js/2.d8a69fed.chunk.js",
     "static/js/2.d8a69fed.chunk.js.map": "/fintonic-questions/static/js/2.d8a69fed.chunk.js.map",
     "index.html": "/fintonic-questions/index.html",
-    "precache-manifest.bcb27fdeb8a9246dd78c7c059376c048.js": "/fintonic-questions/precache-manifest.bcb27fdeb8a9246dd78c7c059376c048.js",
+    "precache-manifest.f919a602c45ab9390e27db89f9a34cd8.js": "/fintonic-questions/precache-manifest.f919a602c45ab9390e27db89f9a34cd8.js",
     "service-worker.js": "/fintonic-questions/service-worker.js",
     "static/css/main.d873f3a0.chunk.css.map": "/fintonic-questions/static/css/main.d873f3a0.chunk.css.map",
     "static/js/2.d8a69fed.chunk.js.LICENSE.txt": "/fintonic-questions/static/js/2.d8a69fed.chunk.js.LICENSE.txt",
@@ -26,6 +26,6 @@
     "static/js/runtime-main.f8bb8be0.js",
     "static/js/2.d8a69fed.chunk.js",
     "static/css/main.d873f3a0.chunk.css",
-    "static/js/main.99304974.chunk.js"
+    "static/js/main.4f0013cd.chunk.js"
   ]
 }
