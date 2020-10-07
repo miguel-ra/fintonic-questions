@@ -29,6 +29,7 @@ function Table() {
                   [classes.active]: column.isSorted,
                   [classes.isSorteable]: !column.disableSortBy,
                 })}
+                col-id={column.id}
               >
                 {column.render("Header")}
                 {!column.disableSortBy ? (
@@ -55,7 +56,9 @@ function Table() {
               <tr {...row.getRowProps()}>
                 {row.cells.map((cell) => {
                   return (
-                    <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
+                    <td col-id={cell.column.id} {...cell.getCellProps()}>
+                      {cell.render("Cell")}
+                    </td>
                   );
                 })}
               </tr>

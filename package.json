@@ -20,10 +20,14 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "npm run test:jest",
+    "test": "npm run test:jest && npm run test:cypress",
     "eject": "react-scripts eject",
     "test:jest": "react-scripts test --watchAll=false --ci",
-    "test:jest:local": "react-scripts test"
+    "test:jest:local": "react-scripts test",
+    "test:jest:coverage": "CI=true npm test --coverage",
+    "test:cypress": "start-server-and-test start http://localhost:3000 cy:run",
+    "test:cypress:local": "cypress open",
+    "cy:run": "cypress run"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,6 +45,7 @@
     ]
   },
   "devDependencies": {
-    "msw": "^0.21.2"
+    "msw": "^0.21.2",
+    "start-server-and-test": "^1.11.5"
   }
 }
