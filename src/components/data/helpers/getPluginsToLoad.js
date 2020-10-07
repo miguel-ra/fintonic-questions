@@ -1,25 +1,24 @@
-import React from "react";
 import { useFilters, usePagination, useSortBy } from "react-table";
 import Filter from "../Filter";
 import Table from "../Table";
 import Pagination from "../Pagination";
 
-const COMPONENT_PLUGINS = new Map([
+export const COMPONENT_PLUGINS = new Map([
   [Filter, useFilters],
   [Table, useSortBy],
   [Pagination, usePagination],
 ]);
 
-const PLUGINS_ORDER = new Map([
+export const PLUGINS_ORDER = new Map([
   [useFilters, 1],
   [useSortBy, 2],
   [usePagination, 3],
 ]);
 
-function getPluginsToLoad(children) {
-  const pluginsToLoad = React.Children.map(children, (child) =>
-    COMPONENT_PLUGINS.get(child.type)
-  );
+function getPluginsToLoad(children = []) {
+  const pluginsToLoad = children
+    .map((child) => COMPONENT_PLUGINS.get(child.type))
+    .filter((plugin) => plugin);
 
   const pluginsSorted = pluginsToLoad.sort((a, b) => {
     const first = PLUGINS_ORDER.get(a);

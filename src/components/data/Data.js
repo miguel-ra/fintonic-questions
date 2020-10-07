@@ -9,7 +9,7 @@ import getPluginsToLoad from "./helpers/getPluginsToLoad";
 const DataContext = React.createContext();
 
 function Data({ columns, data, children }) {
-  const plugins = getPluginsToLoad(children);
+  const plugins = getPluginsToLoad(React.Children.toArray(children));
 
   const methods = useTable(
     {
