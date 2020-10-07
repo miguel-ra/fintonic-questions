@@ -4,11 +4,10 @@ import Data from "../../components/data/Data";
 import Spinner from "../../components/spinner/Spinner";
 import classes from "./Questions.module.scss";
 import { columns } from "./data-config";
-
-const OPENDB_URL = "https://opentdb.com/api.php?amount=50";
+import { API_URL } from "../../constants";
 
 const fetchQuestions = async () => {
-  const response = await fetch(OPENDB_URL);
+  const response = await fetch(API_URL);
   return response.json();
 };
 
@@ -24,7 +23,7 @@ function Questions() {
       {isLoading ? (
         <Spinner />
       ) : isError || (isSuccess && response?.response_code !== 0) ? (
-        <pre>{error?.message || `Error fetching data from ${OPENDB_URL}`}</pre>
+        <pre>{error?.message || `Error fetching data`}</pre>
       ) : (
         <Data columns={columns} data={response.results}>
           <Data.Filter />

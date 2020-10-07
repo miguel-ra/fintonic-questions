@@ -20,6 +20,7 @@ function Select({
         setFilter(e.target.value || undefined);
       }}
       className={cx(classes.select, { [classes.active]: !!filterValue })}
+      aria-label={id}
     >
       <option value="">{Header} (All)</option>
       {options.map((option, i) => (

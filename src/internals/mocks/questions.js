@@ -1,0 +1,151 @@
+const QUESTIONS_MOCK = {
+  response_code: 0,
+  results: [
+    {
+      category: "CATEGORY0",
+      type: "TYPE0",
+      difficulty: "DIFFICULTY0",
+      question: "QUESTION0",
+      correct_answer: "CORRECT_ANSWER0",
+      incorrect_answers: [
+        "INCORRECT_ANSWER0",
+        "INCORRECT_ANSWER0",
+        "INCORRECT_ANSWER0",
+      ],
+    },
+    {
+      category: "CATEGORY1",
+      type: "TYPE1",
+      difficulty: "DIFFICULTY1",
+      question: "QUESTION1",
+      correct_answer: "CORRECT_ANSWER1",
+      incorrect_answers: [
+        "INCORRECT_ANSWER1",
+        "INCORRECT_ANSWER1",
+        "INCORRECT_ANSWER1",
+      ],
+    },
+    {
+      category: "CATEGORY2",
+      type: "TYPE2",
+      difficulty: "DIFFICULTY2",
+      question: "QUESTION2",
+      correct_answer: "CORRECT_ANSWER2",
+      incorrect_answers: [
+        "INCORRECT_ANSWER2",
+        "INCORRECT_ANSWER2",
+        "INCORRECT_ANSWER2",
+      ],
+    },
+    {
+      category: "CATEGORY3",
+      type: "TYPE3",
+      difficulty: "DIFFICULTY3",
+      question: "QUESTION3",
+      correct_answer: "CORRECT_ANSWER3",
+      incorrect_answers: [
+        "INCORRECT_ANSWER3",
+        "INCORRECT_ANSWER3",
+        "INCORRECT_ANSWER3",
+      ],
+    },
+    {
+      category: "CATEGORY4",
+      type: "TYPE4",
+      difficulty: "DIFFICULTY4",
+      question: "QUESTION4",
+      correct_answer: "CORRECT_ANSWER4",
+      incorrect_answers: [
+        "INCORRECT_ANSWER4",
+        "INCORRECT_ANSWER4",
+        "INCORRECT_ANSWER4",
+      ],
+    },
+    {
+      category: "CATEGORY5",
+      type: "TYPE5",
+      difficulty: "DIFFICULTY5",
+      question: "QUESTION5",
+      correct_answer: "CORRECT_ANSWER5",
+      incorrect_answers: [
+        "INCORRECT_ANSWER5",
+        "INCORRECT_ANSWER5",
+        "INCORRECT_ANSWER5",
+      ],
+    },
+    {
+      category: "CATEGORY6",
+      type: "TYPE6",
+      difficulty: "DIFFICULTY6",
+      question: "QUESTION6",
+      correct_answer: "CORRECT_ANSWER6",
+      incorrect_answers: [
+        "INCORRECT_ANSWER6",
+        "INCORRECT_ANSWER6",
+        "INCORRECT_ANSWER6",
+      ],
+    },
+    {
+      category: "CATEGORY7",
+      type: "TYPE7",
+      difficulty: "DIFFICULTY7",
+      question: "QUESTION7",
+      correct_answer: "CORRECT_ANSWER7",
+      incorrect_answers: [
+        "INCORRECT_ANSWER7",
+        "INCORRECT_ANSWER7",
+        "INCORRECT_ANSWER7",
+      ],
+    },
+    {
+      category: "CATEGORY8",
+      type: "TYPE8",
+      difficulty: "DIFFICULTY8",
+      question: "QUESTION8",
+      correct_answer: "CORRECT_ANSWER8",
+      incorrect_answers: [
+        "INCORRECT_ANSWER8",
+        "INCORRECT_ANSWER8",
+        "INCORRECT_ANSWER8",
+      ],
+    },
+    {
+      category: "CATEGORY9",
+      type: "TYPE9",
+      difficulty: "DIFFICULTY9",
+      question: "QUESTION9",
+      correct_answer: "CORRECT_ANSWER9",
+      incorrect_answers: [
+        "INCORRECT_ANSWER9",
+        "INCORRECT_ANSWER9",
+        "INCORRECT_ANSWER9",
+      ],
+    },
+    {
+      category: "CATEGORY10",
+      type: "TYPE10",
+      difficulty: "DIFFICULTY10",
+      question: "QUESTION10",
+      correct_answer: "CORRECT_ANSWER10",
+      incorrect_answers: [
+        "INCORRECT_ANSWER10",
+        "INCORRECT_ANSWER10",
+        "INCORRECT_ANSWER10",
+      ],
+    },
+    {
+      category: "CATEGORY11",
+      type: "TYPE11",
+      difficulty: "DIFFICULTY11",
+      question: "QUESTION11",
+      correct_answer: "CORRECT_ANSWER11",
+      incorrect_answers: [
+        "INCORRECT_ANSWER11",
+        "INCORRECT_ANSWER11",
+        "INCORRECT_ANSWER11",
+      ],
+    },
+  ],
+};
+
+export default QUESTIONS_MOCK;

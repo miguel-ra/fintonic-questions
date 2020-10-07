@@ -9,7 +9,7 @@ function Header({ items }) {
       <nav className={classes.nav}>
         <ul className={classes.list}>
           {items.map(({ icon: Icon, label }) => (
-            <li key={label} className={classes.item}>
+            <li key={label} aria-label={label} className={classes.item}>
               <Icon className={cx(Icon.className, classes.icon)} /> {label}
             </li>
           ))}

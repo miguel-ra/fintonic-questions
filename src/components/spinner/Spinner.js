@@ -3,7 +3,9 @@ import { ReactComponent as IconSpinner } from "../../assets/icons/spinner.svg";
 import classes from "./Spinner.module.scss";
 
 function Spinner() {
-  return <IconSpinner className={classes.spinner} />;
+  return (
+    <IconSpinner role="img" aria-label="spinner" className={classes.spinner} />
+  );
 }
 
 export default Spinner;

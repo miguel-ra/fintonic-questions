@@ -20,7 +20,7 @@ function Table() {
   return (
     <div className={classes.wrapper}>
       <table className={classes.table} {...getTableProps()}>
-        <thead>
+        <thead aria-label="header">
           <tr>
             {headers.map((column) => (
               <th
@@ -48,7 +48,7 @@ function Table() {
             ))}
           </tr>
         </thead>
-        <tbody {...getTableBodyProps()}>
+        <tbody {...getTableBodyProps()} aria-label="content">
           {(page || rows).map((row) => {
             prepareRow(row);
             return (

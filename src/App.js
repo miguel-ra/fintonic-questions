@@ -9,7 +9,7 @@ import { ReactComponent as IconGears } from "./assets/icons/gears.svg";
 import { ReactComponent as IconComments } from "./assets/icons/comments.svg";
 import { ReactComponent as IconSignIn } from "./assets/icons/sign-in.svg";
 
-const menuItems = [
+export const menuItems = [
   { icon: IconBars, label: "Browse" },
   { icon: IconPlus, label: "Add New Questions" },
   { icon: IconGears, label: "API" },

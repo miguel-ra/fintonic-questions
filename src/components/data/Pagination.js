@@ -18,7 +18,7 @@ function Pagination({ showPages = 3 }) {
   const pages = generatePages(pageIndex, showPages, pageOptions.length);
 
   return (
-    <nav className={classes.pagination}>
+    <nav className={classes.pagination} aria-label="pagination">
       {
         <button onClick={() => previousPage()} disabled={!canPreviousPage}>
           {"<"}

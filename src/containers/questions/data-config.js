@@ -17,21 +17,18 @@ export const columns = [
     Header: "Category",
     accessor: "category",
     Filter: Data.Filter.Select,
-    filter: "includes",
   },
   {
     Header: "Type",
     accessor: "type",
     Cell: ({ value }) => TYPES[value] || value,
     Filter: Data.Filter.Select,
-    filter: "includes",
   },
   {
     Header: "Difficulty",
     accessor: "difficulty",
     Cell: ({ value }) => DIFFICULTIES[value] || value,
     Filter: Data.Filter.Select,
-    filter: "includes",
   },
   {
     Header: "Question",
