@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ea12e2ee49fe254d4ea944202e3df026",
+    "revision": "4ef482cc485fe2ea1844832892e5b6c0",
     "url": "/fintonic-questions/index.html"
   },
   {
-    "revision": "367c126cdea65def0a84",
-    "url": "/fintonic-questions/static/css/main.d873f3a0.chunk.css"
+    "revision": "0ea76b5efb36de3ad064",
+    "url": "/fintonic-questions/static/css/main.8e8ee523.chunk.css"
   },
   {
-    "revision": "ec2731f5b35d3e1fe663",
-    "url": "/fintonic-questions/static/js/2.d8a69fed.chunk.js"
+    "revision": "4a3c90ac86842b70129a",
+    "url": "/fintonic-questions/static/js/2.79b17e8c.chunk.js"
   },
   {
     "revision": "0ce5bbda0d44a33e41f4cf41e8bd7ab7",
-    "url": "/fintonic-questions/static/js/2.d8a69fed.chunk.js.LICENSE.txt"
+    "url": "/fintonic-questions/static/js/2.79b17e8c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "367c126cdea65def0a84",
-    "url": "/fintonic-questions/static/js/main.4f0013cd.chunk.js"
+    "revision": "0ea76b5efb36de3ad064",
+    "url": "/fintonic-questions/static/js/main.136bddc1.chunk.js"
   },
   {
     "revision": "c5ee92055a290997ecc3",

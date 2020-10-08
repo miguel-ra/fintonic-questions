@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/fintonic-questions/static/css/main.d873f3a0.chunk.css",
-    "main.js": "/fintonic-questions/static/js/main.4f0013cd.chunk.js",
-    "main.js.map": "/fintonic-questions/static/js/main.4f0013cd.chunk.js.map",
+    "main.css": "/fintonic-questions/static/css/main.8e8ee523.chunk.css",
+    "main.js": "/fintonic-questions/static/js/main.136bddc1.chunk.js",
+    "main.js.map": "/fintonic-questions/static/js/main.136bddc1.chunk.js.map",
     "runtime-main.js": "/fintonic-questions/static/js/runtime-main.f8bb8be0.js",
     "runtime-main.js.map": "/fintonic-questions/static/js/runtime-main.f8bb8be0.js.map",
-    "static/js/2.d8a69fed.chunk.js": "/fintonic-questions/static/js/2.d8a69fed.chunk.js",
-    "static/js/2.d8a69fed.chunk.js.map": "/fintonic-questions/static/js/2.d8a69fed.chunk.js.map",
+    "static/js/2.79b17e8c.chunk.js": "/fintonic-questions/static/js/2.79b17e8c.chunk.js",
+    "static/js/2.79b17e8c.chunk.js.map": "/fintonic-questions/static/js/2.79b17e8c.chunk.js.map",
     "index.html": "/fintonic-questions/index.html",
-    "precache-manifest.f919a602c45ab9390e27db89f9a34cd8.js": "/fintonic-questions/precache-manifest.f919a602c45ab9390e27db89f9a34cd8.js",
+    "precache-manifest.26ad3eeaa2a9939575ddbbe8582ed25c.js": "/fintonic-questions/precache-manifest.26ad3eeaa2a9939575ddbbe8582ed25c.js",
     "service-worker.js": "/fintonic-questions/service-worker.js",
-    "static/css/main.d873f3a0.chunk.css.map": "/fintonic-questions/static/css/main.d873f3a0.chunk.css.map",
-    "static/js/2.d8a69fed.chunk.js.LICENSE.txt": "/fintonic-questions/static/js/2.d8a69fed.chunk.js.LICENSE.txt",
+    "static/css/main.8e8ee523.chunk.css.map": "/fintonic-questions/static/css/main.8e8ee523.chunk.css.map",
+    "static/js/2.79b17e8c.chunk.js.LICENSE.txt": "/fintonic-questions/static/js/2.79b17e8c.chunk.js.LICENSE.txt",
     "static/media/bars.33020ee9.svg": "/fintonic-questions/static/media/bars.33020ee9.svg",
     "static/media/comments.1a5340d7.svg": "/fintonic-questions/static/media/comments.1a5340d7.svg",
     "static/media/gears.08da7896.svg": "/fintonic-questions/static/media/gears.08da7896.svg",
@@ -24,8 +24,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.f8bb8be0.js",
-    "static/js/2.d8a69fed.chunk.js",
-    "static/css/main.d873f3a0.chunk.css",
-    "static/js/main.4f0013cd.chunk.js"
+    "static/js/2.79b17e8c.chunk.js",
+    "static/css/main.8e8ee523.chunk.css",
+    "static/js/main.136bddc1.chunk.js"
   ]
 }
