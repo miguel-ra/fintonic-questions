@@ -7,7 +7,6 @@
 }
 
 .table {
-  min-width: $breakpoint-medium;
   width: 100%;
   border-collapse: collapse;
 
@@ -70,6 +69,7 @@
   }
 
   .table {
+    width: $breakpoint-medium;
     tr {
       td {
         padding: 0.3rem 0.7rem;
