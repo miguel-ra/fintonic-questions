@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e4e38951c6673feeb1d850b0cee0402d",
+    "revision": "3df80193231e886cfa780a82490b5427",
     "url": "/fintonic-questions/index.html"
   },
   {
-    "revision": "d21c3e8983bc288c7d32",
-    "url": "/fintonic-questions/static/css/main.c5c1f65d.chunk.css"
+    "revision": "a8cb64d449981383359a",
+    "url": "/fintonic-questions/static/css/main.f8404255.chunk.css"
   },
   {
     "revision": "4a3c90ac86842b70129a",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fintonic-questions/static/js/2.79b17e8c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d21c3e8983bc288c7d32",
+    "revision": "a8cb64d449981383359a",
     "url": "/fintonic-questions/static/js/main.136bddc1.chunk.js"
   },
   {
