@@ -2,7 +2,6 @@
 @import "../../styles/breakpoints.scss";
 
 .wrapper {
-  overflow-y: scroll;
   box-sizing: content-box;
   margin-bottom: 3.2rem;
 }
@@ -62,7 +61,7 @@
 
 @media screen and (max-width: $breakpoint-medium) {
   .wrapper {
-    overflow-y: scroll;
+    overflow-x: auto;
     max-width: calc(100vw - 6.4rem);
     transform: translateX(3.2rem);
     margin: 0 -3.2rem;
