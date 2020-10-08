@@ -1,4 +1,4 @@
-import generatePages from "../generatePages";
+import { generatePages } from "../Pagination";
 
 describe("generatePages", () => {
   it("Should return pageIndex if showPages is invalid", () => {

@@ -12,7 +12,7 @@ const DIFFICULTIES = {
   hard: "Hard",
 };
 
-export const columns = [
+const columns = [
   {
     Header: "Category",
     accessor: "category",
@@ -38,3 +38,5 @@ export const columns = [
     disableFilters: true,
   },
 ];
+
+export { columns };

@@ -1,4 +1,5 @@
 import React, { useMemo } from "react";
+import PropTypes from "prop-types";
 import cx from "classnames";
 import classes from "./Select.module.scss";
 
@@ -22,7 +23,7 @@ function Select({
       className={cx(classes.select, { [classes.active]: !!filterValue })}
       aria-label={id}
     >
-      <option value="">{Header} (All)</option>
+      <option value="">{Header} (Any)</option>
       {options.map((option, i) => (
         <option key={i} value={option}>
           {option}
@@ -32,6 +33,14 @@ function Select({
   );
 }
 
-Select.propTypes = {};
+Select.propTypes = {
+  column: PropTypes.shape({
+    filterValue: PropTypes.string,
+    setFilter: PropTypes.func,
+    preFilteredRows: PropTypes.array,
+    id: PropTypes.string,
+    Header: PropTypes.string,
+  }).isRequired,
+};
 
 export default Select;

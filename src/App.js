@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./components/header/Header";
-import Questions from "./containers/questions/Questions";
+import Questions from "./features/questions/Questions";
 import classes from "./App.module.scss";
 
 import { ReactComponent as IconBars } from "./assets/icons/bars.svg";
@@ -9,7 +9,7 @@ import { ReactComponent as IconGears } from "./assets/icons/gears.svg";
 import { ReactComponent as IconComments } from "./assets/icons/comments.svg";
 import { ReactComponent as IconSignIn } from "./assets/icons/sign-in.svg";
 
-export const menuItems = [
+const menuItems = [
   { icon: IconBars, label: "Browse" },
   { icon: IconPlus, label: "Add New Questions" },
   { icon: IconGears, label: "API" },
@@ -27,5 +27,7 @@ function App() {
     </>
   );
 }
+
+export { menuItems };
 
 export default App;

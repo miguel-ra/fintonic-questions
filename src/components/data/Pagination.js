@@ -1,8 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
-import generatePages from "./helpers/generatePages";
 import { useDataContext } from "./Data";
 import classes from "./Pagination.module.scss";
+
+function generatePages(pageIndex, showPages, numberOfPages) {
+  let pages = [pageIndex];
+  let index = 0;
+  let buttonInserted = true;
+  while (pages.length < showPages && buttonInserted) {
+    index += 1;
+    buttonInserted = false;
+    if (pageIndex + index < numberOfPages) {
+      pages.push(pageIndex + index);
+      buttonInserted = true;
+    }
+    if (pageIndex - index >= 0) {
+      pages.unshift(pageIndex - index);
+      buttonInserted = true;
+    }
+  }
+  return pages;
+}
 
 function Pagination({ showPages = 3 }) {
   const {
@@ -19,11 +37,7 @@ function Pagination({ showPages = 3 }) {
 
   return (
     <nav className={classes.pagination} aria-label="pagination">
-      {
-        <button onClick={() => previousPage()} disabled={!canPreviousPage}>
-          {"<"}
-        </button>
-      }
+      {canPreviousPage && <button onClick={() => previousPage()}>{"<"}</button>}
       {pages.map((page) => (
         <button
           key={page}
@@ -33,11 +47,7 @@ function Pagination({ showPages = 3 }) {
           {page + 1}
         </button>
       ))}
-      {
-        <button onClick={() => nextPage()} disabled={!canNextPage}>
-          {">"}
-        </button>
-      }
+      {canNextPage && <button onClick={() => nextPage()}>{">"}</button>}
     </nav>
   );
 }
@@ -45,5 +55,7 @@ function Pagination({ showPages = 3 }) {
 Pagination.propTypes = {
   showPages: PropTypes.number,
 };
+
+export { generatePages }; // Exported for testing purposes
 
 export default Pagination;

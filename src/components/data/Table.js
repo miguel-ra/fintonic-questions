@@ -17,6 +17,10 @@ function Table() {
     page,
   } = useDataContext();
 
+  if ((page || rows).length === 0) {
+    return <pre>No results</pre>;
+  }
+
   return (
     <div className={classes.wrapper}>
       <table className={classes.table} {...getTableProps()}>

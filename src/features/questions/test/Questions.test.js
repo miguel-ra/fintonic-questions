@@ -5,12 +5,18 @@ import {
   screen,
   waitForElementToBeRemoved,
 } from "@testing-library/react";
-import Questions from "../Questions";
+import userEvent from "@testing-library/user-event";
+import { ReactQueryConfigProvider } from "react-query";
 import { API_URL } from "../../../constants";
 import { mockServerResponse } from "../../../internals/testing/utils";
 import QUESTIONS_MOCK from "../../../internals/mocks/questions";
-import userEvent from "@testing-library/user-event";
-import { columns } from "../data-config";
+import {
+  STATUS_INVALID_PARAMETER,
+  STATUS_TOKEN_NOT_FOUND,
+  STATUS_TOKEN_EMPTY,
+} from "../opentdbError";
+import { columns } from "../dataConfig";
+import Questions from "../Questions";
 
 const DEFAULT_QUESTIONS_PER_PAGE = 10;
 
@@ -33,13 +39,60 @@ describe("<Questions />", () => {
     expect(loader).toBeInTheDocument();
   });
 
-  it("Should show default error if api responds 200 but the in response response_code is not 0", async () => {
-    mockServerResponse(API_URL, { response_code: 1 });
-    render(<Questions />);
+  it(`Should show invalid parameter error if api responds with response_code ${STATUS_INVALID_PARAMETER}`, async () => {
+    mockServerResponse(API_URL, { response_code: STATUS_INVALID_PARAMETER });
+    render(
+      <ReactQueryConfigProvider config={{ queries: { retry: false } }}>
+        <Questions />
+      </ReactQueryConfigProvider>
+    );
 
     await waitForLoadingToFinish();
 
-    const errorText = screen.getByText("Error fetching data");
+    const errorText = screen.getByText("[opentdb] Invalid parameter");
+    expect(errorText).toBeInTheDocument();
+  });
+
+  it(`Should show invalid parameter error if api responds with response_code ${STATUS_TOKEN_NOT_FOUND}`, async () => {
+    mockServerResponse(API_URL, { response_code: STATUS_TOKEN_NOT_FOUND });
+    render(
+      <ReactQueryConfigProvider config={{ queries: { retry: false } }}>
+        <Questions />
+      </ReactQueryConfigProvider>
+    );
+
+    await waitForLoadingToFinish();
+
+    const errorText = screen.getByText("[opentdb] Token not found");
+    expect(errorText).toBeInTheDocument();
+  });
+
+  it(`Should show invalid parameter error if api responds with response_code ${STATUS_TOKEN_EMPTY}`, async () => {
+    mockServerResponse(API_URL, { response_code: STATUS_TOKEN_EMPTY });
+    render(
+      <ReactQueryConfigProvider config={{ queries: { retry: false } }}>
+        <Questions />
+      </ReactQueryConfigProvider>
+    );
+
+    await waitForLoadingToFinish();
+
+    const errorText = screen.getByText("[opentdb] Token empty");
+    expect(errorText).toBeInTheDocument();
+  });
+
+  it(`Should show invalid parameter error if api responds with response_code is unknown`, async () => {
+    const UNKNOWN = "UNKNOWN";
+    mockServerResponse(API_URL, { response_code: UNKNOWN });
+    render(
+      <ReactQueryConfigProvider config={{ queries: { retry: false } }}>
+        <Questions />
+      </ReactQueryConfigProvider>
+    );
+
+    await waitForLoadingToFinish();
+
+    const errorText = screen.getByText("[opentdb] Unknown error code");
     expect(errorText).toBeInTheDocument();
   });
 
@@ -108,7 +161,8 @@ describe("<Questions />", () => {
   });
 
   it("Should render pagination with the correct number of questions and pages", async () => {
-    const NUMBER_OF_ARROW_BUTTONS = 2;
+    const NUMBER_OF_ARROW_BUTTONS = 1; // Only one, first arrow it's hidden because we are at the first page
+    const DEFAULT_SHOW_PAGES = 3;
 
     render(<Questions />);
 
@@ -119,10 +173,12 @@ describe("<Questions />", () => {
 
     // Check number of buttons
     const pagination = screen.getByRole("navigation", { name: "pagination" });
-    const numberOfButtons =
-      Math.ceil(QUESTIONS_MOCK.results.length / DEFAULT_QUESTIONS_PER_PAGE) +
-      NUMBER_OF_ARROW_BUTTONS;
-    expect(pagination.children).toHaveLength(numberOfButtons);
+    const numberOfPages =
+      Math.min(
+        Math.ceil(QUESTIONS_MOCK.results.length / DEFAULT_QUESTIONS_PER_PAGE),
+        DEFAULT_SHOW_PAGES
+      ) + NUMBER_OF_ARROW_BUTTONS;
+    expect(pagination.children).toHaveLength(numberOfPages);
 
     // Change to next page
     const nextButton = pagination.children[pagination.children.length - 1];

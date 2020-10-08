@@ -1,8 +1,8 @@
 import { useFilters, usePagination, useSortBy } from "react-table";
-import getPluginsToLoad, { COMPONENT_PLUGINS } from "../getPluginsToLoad";
-import Filter from "../../Filter";
-import Table from "../../Table";
-import Pagination from "../../Pagination";
+import { COMPONENT_PLUGINS, getPluginsToLoad } from "../Data";
+import Filter from "../Filter";
+import Table from "../Table";
+import Pagination from "../Pagination";
 
 const NO_PLUGIN_TYPE = "NO_PLUGIN_TYPE";
 const FILTER_TYPE = { type: Filter };
@@ -30,7 +30,7 @@ describe("getPluginsToLoad", () => {
     result = getPluginsToLoad([TABLE_TYPE]);
     expect(result).toEqual([COMPONENT_PLUGINS.get(TABLE_TYPE.type)]);
 
-    // PAGINATION
+    // Pagination
     result = getPluginsToLoad([PATINATION_TYPE]);
     expect(result).toEqual([COMPONENT_PLUGINS.get(PATINATION_TYPE.type)]);
   });

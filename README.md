@@ -2,20 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
-#### `npm start`
-
-#### `npm test`
-
-#### `npm build`
-
-## Demo
-
-You can try it [here](https://miguel-ra.github.io/fintonic-questions/).
-
 ## Requirements
 
 - Use React
@@ -23,11 +9,39 @@ You can try it [here](https://miguel-ra.github.io/fintonic-questions/).
 - The menu should not have any logic, just be layout.
 - **Extra**: Create question filtering
 
+## Demo
+
+You can try it [here](https://miguel-ra.github.io/fintonic-questions/).
+
+## Installation
+
+Use the package manager [npm](https://www.npmjs.com/get-npm) in the folder of the project to install dependencies.
+
+```bash
+npm install
+```
+
+## Available Scripts
+
+In the project directory, you can run:
+
+```bash
+npm start
+```
+
+```bash
+npm test
+```
+
+```bash
+npm build
+```
+
 ## TODOs
 
 Because the purpose of this challenge was to make it simple and without spending much time, I would like to comment on some interesting improvements.
 
-### Create api client:
+### Create API client:
 
 Only one endpoint it's being used, so I decided to call it from where it was required.
 
